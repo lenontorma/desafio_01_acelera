@@ -1,0 +1,20 @@
+# mkdocs.yml
+
+# --- Configuração Geral ---
+site_name: 'Pipeline de Dados: Funcionários'
+site_description: 'Documentação do desafio de processamento de dados de funcionários.'
+site_author: 'Lenon Torma'
+repo_url: 'https://github.com/lenontorma/desafio_01_acelera # Opcional: Link para o repositório
+theme: readthedocs
+nav:
+  - '🏠 Visão Geral': 'index.md'
+  - '🚀 Guia Rápido':
+    - 'Instalação e Setup': 'guia/instalacao.md'
+    - 'Como Executar': 'guia/execucao.md'
+  - '🧩 Arquitetura do Projeto':
+    - 'Estrutura de Pastas': 'arquitetura/estrutura.md'
+    - 'Módulos do Código (src)': 'arquitetura/modulos.md'
+  - '📖 Regras de Negócio':
+    - 'Validação dos Dados': 'regras/validacao.md'
+    - 'Cálculo do Bônus': 'regras/bonus.md'
+  - '📊 Artefatos de Saída': 'outputs.md'
