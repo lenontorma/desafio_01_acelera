@@ -1,6 +1,6 @@
 # 🏠 Visão Geral do Pipeline de Dados de Funcionários
 
-Bem-vindo à documentação do projeto de pipeline de dados de funcionários. Este documento serve como um guia central para entender a arquitetura, as regras de negócio e o funcionamento deste projeto.
+Este documento serve como um guia central para entender a arquitetura, as regras de negócio e o funcionamento deste projeto, **que é empacotado com Docker para garantir portabilidade e uma execução consistente em qualquer ambiente.**
 
 ## O Desafio
 
@@ -24,4 +24,5 @@ Este projeto foi construído utilizando tecnologias modernas e boas práticas do
 * **Pandas:** Para manipulação e análise de dados em alto desempenho.
 * **Pydantic:** Para validação de dados robusta e explícita.
 * **Poetry:** Para gerenciamento de dependências e do ambiente virtual.
+* **Docker:** Para containerização da aplicação, garantindo reprodutibilidade.
 * **MkDocs:** Para a geração desta documentação.
