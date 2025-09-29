@@ -10,7 +10,7 @@ O projeto é totalmente containerizado com Docker para garantir a portabilidade 
 ## ✨ Funcionalidades Principais
 
 * **Extração de Dados:** Lê dados de arquivos `.csv`.
-* **Validação Robusta:** Utiliza Pydantic para criar um "contrato de dados", garantindo a integridade e a qualidade dos registros.
+* **Validação:** Utiliza Pydantic para criar um "contrato de dados", garantindo a integridade e a qualidade dos registros.
 * **Processamento Lógico:** Calcula bônus com base em regras de negócio predefinidas.
 * **Geração de Relatórios:** Cria arquivos de saída separados para dados válidos (`.csv`), erros (`.csv`) e KPIs (`.json`).
 * **Containerização:** Empacotado com Docker para uma execução consistente em qualquer ambiente.
@@ -71,7 +71,7 @@ Após a execução, os relatórios estarão disponíveis na pasta `/output`.
 
 ---
 
-## 📖 Documentação Completa
+## 📖 Documentação
 
 Para uma visão detalhada da arquitetura, regras de negócio, e guias para desenvolvimento local, consulte a **documentação completa do projeto**.
 
@@ -93,4 +93,4 @@ Para visualizar o site de documentação localmente:
 
 ## 🧑‍💻 Para Desenvolvedores (Execução Local)
 
-Se você deseja modificar o código ou executá-lo sem Docker, siga as instruções detalhadas na seção **`Guia Rápido > Instalação e Setup`** da documentação completa.
+Se você deseja modificar o código ou executá-lo sem Docker, siga as instruções detalhadas na seção **`Guia Rápido > Instalação e Setup`** da documentação.
