@@ -1,4 +1,4 @@
-FROM python:3.11-slim as builder
+FROM python:3.13-slim AS builder
 
 ENV POETRY_NO_INTERACTION=1
 ENV POETRY_VIRTUALENVS_IN_PROJECT=1
@@ -9,7 +9,7 @@ COPY poetry.lock pyproject.toml ./
 
 RUN poetry install --no-dev --no-root
 
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 COPY --from=builder /app/.venv ./.venv
