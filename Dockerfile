@@ -7,7 +7,7 @@ WORKDIR /app
 RUN pip install poetry
 COPY poetry.lock pyproject.toml ./
 
-RUN poetry install --no-dev --no-root
+RUN poetry install --only main --no-root
 
 FROM python:3.13-slim
 
