@@ -1,0 +1,18 @@
+# docker-compose.yml
+
+# Define a versão do formato do arquivo Compose
+version: '3.8'
+
+# Define os "serviços" (nossos containers)
+services:
+  # Damos um nome ao nosso serviço, por exemplo, "pipeline"
+  pipeline:
+    # "build: ." diz ao Compose para construir a imagem usando o Dockerfile
+    # que está no mesmo diretório ('.') que este arquivo.
+    build: .
+    
+    # Define os volumes. O Compose é inteligente e entende que "./"
+    # é um caminho relativo, e ele o converte corretamente para qualquer SO.
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
