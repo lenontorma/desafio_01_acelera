@@ -40,25 +40,17 @@ Para visualizar este site de documentação em seu navegador:
 
 ---
 
-## 2. Execução via Docker (Recomendado para Execução Padrão)
+## 2. Execução Universal com Docker Compose (Recomendado)
 
-Esta é a forma recomendada de executar o pipeline para garantir que ele rode em um ambiente limpo e consistente, sem depender das configurações da sua máquina local.
+Esta é a forma recomendada de executar o pipeline. O Docker Compose fornece um comando único e universal que funciona da mesma forma em Windows, macOS e Linux.
 
-### Passo 1: Construir a Imagem Docker
+### Pré-requisitos
 
-Primeiro, você precisa "empacotar" a aplicação em uma imagem Docker. Este comando precisa ser executado apenas uma vez ou sempre que o código-fonte for alterado.
+* [Docker e Docker Compose](https://www.docker.com/products/docker-desktop/) instalados e em execução.
 
-```bash
-docker build -t pipeline-funcionarios .
-  ```
-### Passo 2: Executar o Pipeline via Container
-Com a imagem construída, você pode executar o pipeline a qualquer momento com o seguinte comando. Ele utiliza volumes para compartilhar as pastas data (entrada) e output (saída) entre sua máquina e o container.
+### Executando o Pipeline
+
+Com o arquivo de entrada `funcionarios.csv` na pasta `/data`, execute o seguinte comando na raiz do projeto:
 
 ```bash
-docker run --rm \
-  -v "$(pwd)/data:/app/data" \
-  -v "$(pwd)/output:/app/output" \
-  pipeline-funcionarios
-```
-Este comando executa o pipeline de forma isolada e, ao final, os relatórios estarão disponíveis na sua pasta output/ local, como na execução tradicional.
-
+docker-compose run --rm pipeline
